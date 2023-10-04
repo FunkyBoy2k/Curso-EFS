@@ -1,0 +1,23 @@
+
+<odoo>
+    <record id="todo_app.tarea_1" model="todo.app">
+        <field name="name">Tarea #1: Cobrar a recuperada</field>
+        <field name="state">Borrador</field>
+    </record>
+    <record id="todo_app.tarea_2" model="todo.app">
+        <field name="name">Tarea #2: Levantar BD de baleares</field>
+        <field name="state">Borrador</field>
+    </record>
+    <record id="todo_app.tarea_3" model="todo.app">
+        <field name="name">Tarea #3: Reunion con Cerema</field>
+        <field name="state">Cancelada</field>
+    </record>
+    <record id="todo_app.tarea_4" model="todo.app">
+        <field name="name">Tarea #4: Kcahrse a Lucia</field>
+        <field name="state">Terminado</field>
+    </record>
+    <record id="todo_app.tarea_5" model="todo.app">
+        <field name="name">Tarea #5: Comprar viveres</field>
+        <field name="state">Terminado</field>
+    </record>
+</odoo>
