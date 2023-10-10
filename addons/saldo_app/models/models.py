@@ -3,12 +3,11 @@ from odoo import fields, models
 class Movimiento(models.Model):
     _name = "sa.movimiento" 
     _description = "Movimineto"
-    _inherit = "mail.thread"
 
     name = fields.Char(string ="Nombre",required=True)
     type_move = fields.Selection(selection=[("ingreso","Ingreso"),("gasto","Gasto")],string ="Tipo",default="ingreso",required=True)
     date = fields.Datetime(string ="Fecha")
-    amount =  fields.Float("Monto",track_visibility="onchange")
+    amount =  fields.Float("Monto")
     recipt_image = fields.Binary("Foto del recibo")
     notas = fields.Html("Notas")
     currency_id = fields.Many2one("res.currency",default=162)
