@@ -2,7 +2,7 @@
 <odoo>
     <!-- vistas -->
     <record id="view_form_movimiento" model="ir.ui.view">
-        <field name="name">view.form.sa.movimiento</field>
+        <field name="name">view.form.movimiento.sa</field>
         <field name="model">sa.movimiento</field>
         <field name="arch" type="xml">
             <form string="">
@@ -37,20 +37,7 @@
         </field>
     </record>
 
-    <record id="view_tree_movimiento" model="ir.ui.view">
-        <field name="name">view.tree.sa.movimiento</field>
-        <field name="model">sa.movimiento</field>
-        <field name="arch" type="xml">
-            <tree decoration-success="type_move == 'ingreso'" decoration-danger="type_move == 'gasto'">
-                <field name="date" />
-                <field name="name" />
-                <field name="type_move" />
-                <field name="amount" widget="monetary" options="{'currency_field':'currency_id'}"/>
-                <field name="currecy_id" invisible="1"/>
-                
-            </tree>
-        </field>
-    </record>
+   
 
     <!-- acciones de ventana-->
     <record id="action_view_movimiento" model="ir.actions.act_window">
