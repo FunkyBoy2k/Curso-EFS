@@ -27,6 +27,9 @@
                         <field name="recipt_image" widget="image"/>
                     </group>                
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
             </form>
         </field>
     </record>
