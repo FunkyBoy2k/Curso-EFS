@@ -59,7 +59,7 @@
                 <field name="notas" />
                 <field name="category_id" />
                 <field name="tag_ids" />
-
+<!-- filtros-->
                 <filter name="filter_tipo_ingresos" 
                         string="Ingresos" 
                         domain="[('type_move', '=', 'ingreso')]" />
@@ -70,7 +70,9 @@
                         domain="[('date','&gt;=',datetime.datetime.now().strftime('%Y-%m-%d 00:00:00')),('date','&lt;=',datetime.datetime.now().strftime('%Y-%m-%d 23:59:59'))]"/>
                 <filter name="filter_this_week" string="Ultimos 7 dias" 
                         domain="[('date','&lt;=',context_today().strftime('%Y-%m-%d 23:59:59')),('date','&gt;=',(context_today()-datetime.timedelta(days=7)).strftime('%Y-%m-%d 00:00:00'))]"/>
-                
+                <filter name="group_type_move" string="Tipo" 
+                        context="{'group_by': 'type_move'}" />
+                <filter name="group_date" string="Fecha" context="{'group_by': 'date'}" />
             </search>
         </field>
     </record>
